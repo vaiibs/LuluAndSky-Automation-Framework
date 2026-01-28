@@ -43,6 +43,10 @@ It follows industry best practices like Page Object Model (POM), data-driven tes
 * Screenshots are captured automatically on failures
 * Logs help track execution flow and debugging
 
+  
+https://vaiibs.github.io/LuluAndSky-Automation-Framework/src/test/resources/Report/TestRunner.html
+
+
 ## 🧪 Automation Scope
 * UI functional testing
 * Smoke and regression testing
