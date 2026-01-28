@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Suite" verbose="0">
+
+	<listeners>
+		<listener class-name="listeners.MyListener"></listener>
+	</listeners>
+
+	<parameter name="browser" value="chrome"></parameter>
+
+  	<test thread-count="5" name="Test">
+  	
+  		<classes>
+  			<class name="LoginRegister.LoginTest"></class>
+  			<class name="ProductListingPage.ProductListingPageTesting"></class>
+  			<class name="ProductDetailPage.ProductDetailPageTesting"></class>
+  			<class name="Cart_Wishlist.WishlistTest"></class>
+  			<class name="Cart_Wishlist.CartTest"></class> 
+  			<class name="Search_Filter.SearchFeildTesting"></class>
+  			<class name="FooterModule.LinksTesting"></class>
+  			<class name="Checkout_Payment.CheckoutTesting"></class>
+  		</classes>
+  		
+  	</test> 
+  	
+</suite> 
