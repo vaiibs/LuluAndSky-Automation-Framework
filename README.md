@@ -2,6 +2,8 @@
 Lulu & Sky is a fashion-focused e-commerce web application that primarily offers women’s clothing, dresses, bags, shoes, and accessories, along with a dedicated kids section for boys and girls.
 The platform allows users to browse fashion categories, view detailed product information, select sizes and variants, add items to the cart, and complete purchases through a seamless checkout flow.
 
+<img width="1871" height="873" alt="image" src="https://github.com/user-attachments/assets/cba13df3-9ac6-4430-a65f-213cb3b2ea9c" />
+
 ## 🚀 Overview
 A Hybrid Test Automation Framework for Lulu & Sky using **Selenium WebDriver**, **Java**, and **TestNG**.
 It follows industry best practices like Page Object Model (POM), data-driven testing, utility layers, and reusable components, making it scalable, maintainable, and easy to enhance.
