@@ -22,11 +22,11 @@ HybridFramework
 │ └── base # Base class (WebDriver setup & teardown)
 │
 ├── src/test/java
-│ ├── testcases # TestNG test classes
+│ └── testcases # TestNG test classes
 │
 ├── src/test/resources
 │ ├── testdata # Excel / JSON test data files
-│ ├── config.properties
+│ └── config.properties
 │
 ├── reports # Execution reports
 ├── screenshots # Failure screenshots
