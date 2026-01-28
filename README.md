@@ -12,8 +12,6 @@ It follows industry best practices like Page Object Model (POM), data-driven tes
 * **Reporting:** Extent Reports / TestNG Listeners
 * **Pattern:** Page Object Model (POM)
 * **Version Control:** Git & GitHub
-  
-## 📂 Framework Structure
 
 <img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/961e876f-6b7e-43e6-8741-f55d50d67255" />
 
