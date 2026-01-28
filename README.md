@@ -1,4 +1,6 @@
 # Lulu & Sky E-Commerce Automation Framework
+Lulu & Sky is a fashion-focused e-commerce web application that primarily offers women’s clothing, dresses, bags, shoes, and accessories, along with a dedicated kids section for boys and girls.
+The platform allows users to browse fashion categories, view detailed product information, select sizes and variants, add items to the cart, and complete purchases through a seamless checkout flow.
 
 ## 🚀 Overview
 A Hybrid Test Automation Framework for Lulu & Sky using **Selenium WebDriver**, **Java**, and **TestNG**.
@@ -30,12 +32,6 @@ It follows industry best practices like Page Object Model (POM), data-driven tes
 * Screenshot capture on test failure
 * Easy integration with CI/CD tools
 
-## 🐛 Key Bugs Identified
-* "Logout" button reverts to Login in the header.
-* "Add to Wishlist" is non-responsive for guest users.
-* "Remove from Wishlist" button text fails to toggle back to "Add to Wishlist" after item removal.
-* "Add to bag" button is not working from Wishlist page.
-
 ## Prerequisites
 * Java JDK 8 or above
 * Maven installed
@@ -47,9 +43,15 @@ It follows industry best practices like Page Object Model (POM), data-driven tes
 * Screenshots are captured automatically on failures
 * Logs help track execution flow and debugging
 
-## 🧪 Types of Testing Covered
-* Functional Testing
-* Regression Testing
-* Smoke Testing
-* UI Validation
+## 🧪 Automation Scope
+* UI functional testing
+* Smoke and regression testing
+* Cross-browser testing
+* Validation of dynamic elements (price, cart count, filters)
+* Handling alerts, frames, waits, and popups
 
+## 🐛 Key Bugs Identified
+* "Logout" button reverts to Login in the header.
+* "Add to Wishlist" is non-responsive for guest users.
+* "Remove from Wishlist" button text fails to toggle back to "Add to Wishlist" after item removal.
+* "Add to bag" button is not working from Wishlist page.
