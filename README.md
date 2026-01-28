@@ -14,25 +14,8 @@ It follows industry best practices like Page Object Model (POM), data-driven tes
 * **Version Control:** Git & GitHub
   
 ## 📂 Framework Structure
-HybridFramework
-│
-├── src/main/java
-│ ├── pom # Page Object classes
-│ ├── utilities # Reusable utility classes (Waits, Excel, Config, JS, etc.)
-│ └── base # Base class (WebDriver setup & teardown)
-│
-├── src/test/java
-│ └── testcases # TestNG test classes
-│
-├── src/test/resources
-│ ├── testdata # Excel / JSON test data files
-│ └── config.properties
-│
-├── reports # Execution reports
-├── screenshots # Failure screenshots
-├── pom.xml # Maven dependencies
-├── testng.xml # TestNG suite file
-└── README.md
+
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/961e876f-6b7e-43e6-8741-f55d50d67255" />
 
 ## 📁 Modules Covered
 * **Login/Register:** Handling multi-browser session persistence.
