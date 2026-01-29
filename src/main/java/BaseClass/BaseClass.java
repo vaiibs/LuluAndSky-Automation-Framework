@@ -1,7 +1,7 @@
 package BaseClass;
 
 import static org.testng.Assert.assertEquals;
-
+import org.testng.annotations.Optional;
 import java.time.Duration;
 import java.util.Set;
 import java.util.logging.Level;
@@ -34,8 +34,8 @@ public class BaseClass
 	public ProductDetailPage p;
 	
 	@BeforeClass
-	@Parameters("browser")@Optional("chrome")
-	public void before(String browser)
+	@Parameters("browser")
+	public void before(@Optional("chrome") String browser)
 	{
 		System.setProperty("webdriver.chrome.silentOutput", "true"); 
 		Logger.getLogger("org.openqa.selenium").setLevel(Level.OFF);
