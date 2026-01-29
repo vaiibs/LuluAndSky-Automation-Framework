@@ -40,50 +40,60 @@ public class ProductDetailPage
 	
 	public void clickFS()
 	{
+		wait.until(ExpectedConditions.visibilityOf(FS));
 		FS.click();
 	}
 	
 	public void clickPlusIcon()
 	{
+		wait.until(ExpectedConditions.visibilityOf(plusIcon));
 		plusIcon.click();
 	}
 	
 	public WebElement getAddToBagButton()
 	{
+		wait.until(ExpectedConditions.visibilityOf(AddToBag));
 		return AddToBag;
 	}
 	public WebElement getAddToWishlistButton()
 	{
+		wait.until(ExpectedConditions.visibilityOf(AddToWishlist));
 		return AddToWishlist;
 	}
 	
 	public void clickM()
 	{
+		wait.until(ExpectedConditions.visibilityOf(M));
 		M.click();
 	}
 	
 	public void clickL()
 	{
+		wait.until(ExpectedConditions.visibilityOf(L));
 		L.click();
 	}
 	
 	public void clickXL()
 	{
+		wait.until(ExpectedConditions.visibilityOf(XL));
 		XL.click();
 	}
 	
 	public void clickXXL()
 	{
+		wait.until(ExpectedConditions.visibilityOf(XXL));
 		XXL.click();
 	}
 	
 	public void clickAddToBag()
 	{
+		wait.until(ExpectedConditions.visibilityOf(AddToBag));
 		AddToBag.click();
 	}
 	
 	public void clickAddToWishlist()
 	{
+		wait.until(ExpectedConditions.visibilityOf(AddToWishlist));
 		AddToWishlist.click();
 	}
 	

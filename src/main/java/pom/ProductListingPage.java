@@ -54,6 +54,7 @@ public class ProductListingPage
 	public void hoverProduct()
 	{
 		Actions a = new Actions(d) ;
+		wait.until(ExpectedConditions.elementToBeClickable(productImg));
 		a.moveToElement(productImg).perform();
 	}
 	
@@ -64,26 +65,31 @@ public class ProductListingPage
 	
 	public void clickDressFilter()
 	{
+		wait.until(ExpectedConditions.elementToBeClickable(dressFilter));
 		dressFilter.click();
 	}
 	
 	public void clickAsymmetricalStyle()
 	{
+		wait.until(ExpectedConditions.elementToBeClickable(AsymmetricalStyle));
 		AsymmetricalStyle.click();
 	}
 	
 	public void clickBlackColor()
 	{
+		wait.until(ExpectedConditions.elementToBeClickable(blackColor));
 		blackColor.click();
 	}
 	 
 	public void clickProductImg()
 	{
+		wait.until(ExpectedConditions.elementToBeClickable(productImg));
 		productImg.click();
 	}
 	
 	public void clickProductImg2()
 	{
+		wait.until(ExpectedConditions.elementToBeClickable(productImg2));
 		productImg2.click();
 	}
 	
