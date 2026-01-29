@@ -34,7 +34,7 @@ public class BaseClass
 	public ProductDetailPage p;
 	
 	@BeforeClass
-	@Parameters("browser")
+	@Parameters("browser")@Optional("chrome")
 	public void before(String browser)
 	{
 		System.setProperty("webdriver.chrome.silentOutput", "true"); 
