@@ -145,14 +145,14 @@ public class BaseClass
 		h.clickWomenButton();
 	}
 	
-	public void NavigateToPDP() throws InterruptedException
+	public void NavigateToPDP()
 	{
 		HeaderAndFooterComponents h = new HeaderAndFooterComponents(d);
 		h.clickWomenButton();
 		ProductListingPage p = new ProductListingPage(d);
 		p.clickProductImg2();
-
-		Thread.sleep(5000);
+		wait.until(ExpectedConditions.numberOfWindowsToBe(2));
+		//Thread.sleep(5000);
 		String parent = d.getWindowHandle();
 		Set<String> handles = d.getWindowHandles();
 		String title ="";
