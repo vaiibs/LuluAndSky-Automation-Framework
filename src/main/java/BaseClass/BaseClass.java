@@ -44,7 +44,7 @@ public class BaseClass
 		{
 	        case "chrome":
 	        	ChromeOptions o = new ChromeOptions();
-	        	//o.addArguments("--headless=new");
+	        	o.addArguments("--headless=new");
 	        	o.addArguments("--disable-gpu");
 	        	o.addArguments("--no-sandbox");
 	        	o.addArguments("--disable-dev-shm-usage");
