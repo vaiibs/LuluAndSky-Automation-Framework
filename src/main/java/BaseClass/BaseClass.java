@@ -18,7 +18,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
-
+import org.openqa.selenium.firefox.FirefoxOptions; 
+import org.openqa.selenium.edge.EdgeOptions;       
 import Utilities.ExcelUtility;
 import Utilities.PropertiesUtility;
 import WaitUtilities.Wait;
@@ -49,28 +50,32 @@ public class BaseClass
 	        	o.addArguments("--no-sandbox");
 	        	o.addArguments("--disable-dev-shm-usage");
 	        	o.addArguments("--window-size=1920,1080");
-	        	o.addArguments("--start-maximized");
-	        	o.addArguments("--disable-notifications");
+	        	//o.addArguments("--start-maximized");
+	        	//o.addArguments("--disable-notifications");
 	        	o.addArguments("--remote-allow-origins=*");
-	        	o.addArguments("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36");
+	        	//o.addArguments("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36");
 	        	d = new ChromeDriver(o);
-	            d.manage().window().setSize(new Dimension(1920, 1080));
+	            //d.manage().window().setSize(new Dimension(1920, 1080));
 	            break;
 	
 	        case "firefox":
-	            d = new FirefoxDriver();
-	            break;
-	
-	        case "edge":
-	            d = new EdgeDriver();
-	            break;
+			    FirefoxOptions fOptions = new FirefoxOptions();
+			    fOptions.addArguments("-headless");
+			    d = new FirefoxDriver(fOptions);
+			    break;
+			
+			case "edge":
+			    EdgeOptions eOptions = new EdgeOptions();
+			    eOptions.addArguments("--headless=new");
+			    d = new EdgeDriver(eOptions);
+			    break;
 	
 	        default:
 	            throw new RuntimeException("Browser not supported: " + browser);
 		}
-		d.manage().window().maximize();
-		//d.manage().timeouts().implicitlyWait(Duration.ofSeconds(Integer.parseInt(PropertiesUtility.getDataFromProperties("wait"))));
-		wait = new WebDriverWait(d,Duration.ofSeconds(15));
+		//d.manage().window().maximize();
+		d.manage().timeouts().implicitlyWait(Duration.ofSeconds(Integer.parseInt(PropertiesUtility.getDataFromProperties("wait"))));
+		wait = new WebDriverWait(d,Duration.ofSeconds(20));
 		//d.get(PropertiesUtility.getDataFromProperties("url"));
 		//login();
 	}
@@ -78,7 +83,7 @@ public class BaseClass
 	@AfterClass
 	public void after()
 	{
-		//d.quit();
+		d.quit();
 	}
 	
 	public void addToWishlist()
@@ -140,13 +145,14 @@ public class BaseClass
 		h.clickWomenButton();
 	}
 	
-	public void NavigateToPDP()
+	public void NavigateToPDP() throws InterruptedException
 	{
 		HeaderAndFooterComponents h = new HeaderAndFooterComponents(d);
 		h.clickWomenButton();
 		ProductListingPage p = new ProductListingPage(d);
 		p.clickProductImg2();
-		
+
+		Thread.sleep(5000);
 		String parent = d.getWindowHandle();
 		Set<String> handles = d.getWindowHandles();
 		String title ="";
