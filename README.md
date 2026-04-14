@@ -1,4 +1,4 @@
-# Lulu & Sky E-Commerce Automation Framework
+# Lulu & Sky E-Commerce Automation Framework (TEST2)
 Lulu & Sky is a fashion-focused e-commerce web application that primarily offers women’s clothing, dresses, bags, shoes, and accessories, along with a dedicated kids section for boys and girls.
 The platform allows users to browse fashion categories, view detailed product information, select sizes and variants, add items to the cart, and complete purchases through a seamless checkout flow.
 
